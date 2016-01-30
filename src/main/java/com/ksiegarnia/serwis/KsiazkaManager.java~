@@ -1,0 +1,59 @@
+package com.ksiegarnia.serwis;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.ksiegarnia.domena.Ksiazka;
+import com.ksiegarnia.domena.Autor;
+
+@Stateless
+public class KsiazkaManager {
+
+	@PersistenceContext
+	EntityManager em;
+
+	public Ksiazka pobierzPoId(Long id) {
+		return em.find(Ksiazka.class, id);
+	}
+
+	public void dodaj(Ksiazka ksiazka) {
+		ksiazka.setId(null);
+		em.persist(ksiazka);
+		Autor autor = em.find(Autor.class, ksiazka.getAutor().getId());
+		autor.setIlosck(autor.getIlosck()-1);
+		em.merge(autor);
+	}
+
+	public void edytuj(Pogrzeb pogrzeb, Date data, Trumna trumna, Double cena, String opis) {
+		pogrzeb = em.find(Pogrzeb.class, pogrzeb.getId());
+		Trumna tr = em.find(Trumna.class, pogrzeb.getTrumna().getId());
+		pogrzeb.setTrumna(trumna);
+		pogrzeb.setData(data);
+		pogrzeb.setCena(cena);
+		pogrzeb.setOpis(opis);
+		em.merge(pogrzeb);
+		tr.setIlosc(tr.getIlosc()+1);
+		em.merge(tr);
+		trumna.setIlosc(trumna.getIlosc()-1);
+		em.merge(trumna);
+	}
+
+	public void usun(Pogrzeb pogrzeb) {
+		pogrzeb = em.find(Pogrzeb.class, pogrzeb.getId());
+		Trumna tr = em.find(Trumna.class, pogrzeb.getTrumna().getId());
+		tr.getPogrzeby().remove(pogrzeb);
+		em.remove(pogrzeb);
+		tr.setIlosc(tr.getIlosc()+1);
+		em.merge(tr);
+	}
+
+	public List<Pogrzeb> dajWszystkie() {
+		return em.createNamedQuery("pogrzeb.wszystkie").getResultList();
+	}
+
+}
+

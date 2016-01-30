@@ -16,7 +16,7 @@ repo.registration_uri = None
 repo.collection_type = core
 repo.refresh_seconds = 14400
 
-uuid = 76def6ef-bd6c-4edc-a0cd-10b9aac7a0f5
+uuid = 645f91a7-6b6d-4848-b9a0-23489445b9f3
 
 [variant]
 variant.opensolaris.zone = global
@@ -39,7 +39,7 @@ repo.registration_uri = None
 repo.collection_type = core
 repo.refresh_seconds = 14400
 
-uuid = 76def6ef-bd6c-4edc-a0cd-10b9aac7a0f5
+uuid = 645f91a7-6b6d-4848-b9a0-23489445b9f3
 
 [authority_contrib.glassfish.org]
 origin = http://pkg.glassfish.org/v3/contrib/
@@ -59,7 +59,7 @@ repo.registration_uri = None
 repo.collection_type = core
 repo.refresh_seconds = 14400
 
-uuid = 76def6ef-bd6c-4edc-a0cd-10b9aac7a0f5
+uuid = 645f91a7-6b6d-4848-b9a0-23489445b9f3
 
 [filter]
 

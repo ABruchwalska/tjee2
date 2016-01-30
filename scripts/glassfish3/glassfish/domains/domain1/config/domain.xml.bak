@@ -1,5 +1,12 @@
 <domain log-root="${com.sun.aas.instanceRoot}/logs" application-root="${com.sun.aas.instanceRoot}/applications" version="5">
-  <system-applications></system-applications>
+  <system-applications>
+    <application context-root="" location="${com.sun.aas.installRootURI}/lib/install/applications/__admingui" name="__admingui" directory-deployed="true" object-type="system-admin">
+      <module name="__admingui">
+        <engine sniffer="web"></engine>
+        <engine sniffer="security"></engine>
+      </module>
+    </application>
+  </system-applications>
   <applications></applications>
   <resources>
     <jdbc-connection-pool driver-classname="" datasource-classname="org.hsqldb.jdbc.JDBCDataSource" res-type="javax.sql.DataSource" description="" name="HSQLPool" ping="true">
@@ -23,9 +30,17 @@
       <property name="DatabaseName" value="sun-appserv-samples"></property>
       <property name="connectionAttributes" value=";create=true"></property>
     </jdbc-connection-pool>
+    <jdbc-connection-pool driver-classname="" datasource-classname="org.hsqldb.jdbc.JDBCDataSource" res-type="javax.sql.DataSource" description="" name="HSQLPool" ping="true">
+      <property name="DatabaseName" value="jdbc:hsqldb:hsql://localhost/workdb"></property>
+      <property name="User" value="SA"></property>
+      <property name="Password" value=""></property>
+      <property name="connectionAttributes" value=";ifexists=true"></property>
+    </jdbc-connection-pool>
+    <jdbc-resource pool-name="HSQLPool" description="DataSource for demo apps with HSQLDB" jndi-name="jdbc/demoapps"></jdbc-resource>
   </resources>
   <servers>
     <server name="server" config-ref="server-config">
+      <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
     </server>
@@ -406,9 +421,9 @@
     </config>
   </configs>
   <property name="administrative.domain.name" value="domain1"></property>
-  <secure-admin special-admin-indicator="3047aff3-3214-4ac9-aa5e-a5dad78b2eea">
-    <secure-admin-principal dn="CN=localhost,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
-    <secure-admin-principal dn="CN=localhost-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
+  <secure-admin special-admin-indicator="d467a062-2047-452f-a862-c4eb6ff5ff5a">
+    <secure-admin-principal dn="CN=virtualbox,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
+    <secure-admin-principal dn="CN=virtualbox-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
   </secure-admin>
   <load-balancers></load-balancers>
   <lb-configs></lb-configs>

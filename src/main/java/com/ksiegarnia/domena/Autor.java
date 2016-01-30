@@ -21,7 +21,7 @@ import javax.validation.constraints.Size;
 @Entity
 @NamedQueries({ 
 	@NamedQuery(name = "autor.wszystkie", query = "Select a from Autor a"),
-	@NamedQuery(name = "autor.dostepne", query = "Select a from Autor a where a.ilosck > 0 order by a.rodzaj")
+	@NamedQuery(name = "autor.dostepne", query = "Select a from Autor a where a.ilosck > 0 order by a.imie")
 })
 public class Autor {
 	
@@ -57,7 +57,7 @@ public class Autor {
 	public List<Ksiazka> getKsiazki() {
 	return ksiazki;
 	}
-	public void setKsiazki(List<ksiazka> ksiazki) {
+	public void setKsiazki(List<Ksiazka> ksiazki) {
 	this.ksiazki = ksiazki;
 	}
 
@@ -76,10 +76,12 @@ public class Autor {
 		this.wzrost = wzrost;
 	}
 
+
 	@Min(0)
 	public Integer getIlosck() {
 		return ilosck;
 	}
+
 	public void setIlosck(Integer ilosck) {
 		this.ilosck = ilosck;
 	}

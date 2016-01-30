@@ -1,6 +1,6 @@
-INSERT INTO autor(imie, wzrost, ilosck) VALUES ('Andrzej', 150, 1)
-INSERT INTO autor(imie, wzrost, ilosck) VALUES ('Stefan', 170, 2)
-INSERT INTO autor(imie, wzrost, ilosck) VALUES ('Ania', 172, 1)
-INSERT INTO autor(imie, wzrost, ilosck) VALUES ('Kasia', 164, 3)
-INSERT INTO autor(imie, wzrost, ilosck) VALUES ('Jerzy', 200, 2)
+INSERT INTO trumna(rodzaj, cena, ilosc) VALUES ('kaszubska', 50, 100)
+INSERT INTO trumna(rodzaj, cena, ilosc) VALUES ('lubelska', 100, 5)
+INSERT INTO trumna(rodzaj, cena, ilosc) VALUES ('niemiecka', 20, 1000)
+INSERT INTO trumna(rodzaj, cena, ilosc) VALUES ('turek', 100, 1)
+INSERT INTO trumna(rodzaj, cena, ilosc) VALUES ('warszawska', 200, 2)
 

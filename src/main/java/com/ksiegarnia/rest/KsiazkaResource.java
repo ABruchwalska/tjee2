@@ -55,7 +55,7 @@ public class KsiazkaResource{
 	DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 	try
 	{
-		ksiazka.setData(format.parse(data));
+		ksiazka.setDatawyd(format.parse(datawyd));
 	}
 	catch(Exception e)
 	{
@@ -85,7 +85,7 @@ public class KsiazkaResource{
 	DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 	try
 	{
-		km.edytuj(ksiazka, format.parse(data), am.pobierzPoId(autor), cena, opis);
+		km.edytuj(ksiazka, format.parse(datawyd), am.pobierzPoId(autor), cena, opis);
 	}
 	catch(Exception e)
 	{

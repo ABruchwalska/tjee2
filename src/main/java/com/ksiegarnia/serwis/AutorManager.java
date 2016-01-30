@@ -14,7 +14,7 @@ public class AutorManager {
 	@PersistenceContext
 	EntityManager em;
 
-	public AutorpobierzPoId(Long id) {
+	public Autor pobierzPoId(Long id) {
 		return em.find(Autor.class, id);
 	}
 
@@ -27,7 +27,7 @@ public class AutorManager {
 	public void edytuj(Autor autor, String imie, int wzrost, Integer ilosck) {
 		autor = em.find(Autor.class, autor.getId());
 		autor.setImie(imie);
-		autor.setwzrost(wzrost);
+		autor.setWzrost(wzrost);
 		autor.setIlosck(ilosck);
 		em.merge(autor);
 	}

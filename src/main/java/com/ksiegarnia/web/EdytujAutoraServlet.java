@@ -20,7 +20,7 @@ public class EdytujAutoraServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String link = request.getPathInfo();
-        request.setAttribute("tautorEdytowany", am.pobierzPoId(Long.parseLong(link.substring(link.lastIndexOf("/") + 1, link.length()))));
+        request.setAttribute("autorEdytowany", am.pobierzPoId(Long.parseLong(link.substring(link.lastIndexOf("/") + 1, link.length()))));
         request.getRequestDispatcher("/autorzy/edytuj.jsp").forward(request, response);
     }
 }

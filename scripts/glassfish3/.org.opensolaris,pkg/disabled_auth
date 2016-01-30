@@ -2,7 +2,7 @@
 origin = http://pkg.oracle.com/javaeesdk/6/release/
 ssl_key = None
 ssl_cert = None
-uuid = 2dd25e8c-cb8e-11e1-af77-000093d13ae0
+uuid = 208e0211-cb8e-11e1-8910-000093d13ae0
 repo.related_uris = []
 mirrors = []
 repo.description = None

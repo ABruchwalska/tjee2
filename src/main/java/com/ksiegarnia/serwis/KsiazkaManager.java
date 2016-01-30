@@ -28,7 +28,7 @@ public class KsiazkaManager {
 		em.merge(autor);
 	}
 
-	public void edytuj(Ksiazka, Date datawyd, Autor autor, Double cena, String opis) {
+	public void edytuj(Ksiazka ksiazka, Date datawyd, Autor autor, Double cena, String opis) {
 		ksiazka = em.find(Ksiazka.class, ksiazka.getId());
 		Autor au = em.find(Autor.class, ksiazka.getAutor().getId());
 		ksiazka.setAutor(autor);
@@ -45,7 +45,7 @@ public class KsiazkaManager {
 	public void usun(Ksiazka ksiazka) {
 		ksiazka = em.find(Ksiazka.class, ksiazka.getId());
 		Autor au = em.find(Autor.class, ksiazka.getAutor().getId());
-		au.getKsiazka().remove(ksiazka);
+		//au.getKsiazka().remove(ksiazka);
 		em.remove(ksiazka);
 		au.setIlosck(au.getIlosck()+1);
 		em.merge(au);
