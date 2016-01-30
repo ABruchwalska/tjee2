@@ -1,12 +1,12 @@
-/* AUTOMATICALLY GENERATED ON Thu Jan 28 12:37:54 CET 2016*/
+/* AUTOMATICALLY GENERATED ON Sat Jan 30 17:16:26 CET 2016*/
 /* DO NOT EDIT */
 
 grant {
   permission javax.security.jacc.EJBMethodPermission "AutorManager", "pobierzPoId,Local,java.lang.Long";
-  permission javax.security.jacc.EJBMethodPermission "KsiazkaManager", "dajWszystkie,Local,";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaResource", "edytuj,Local,java.lang.Long,java.lang.String,java.lang.Long,java.lang.Double,java.lang.String";
-  permission javax.security.jacc.EJBMethodPermission "AutorResource", "usun,Local,long";
+  permission javax.security.jacc.EJBMethodPermission "KsiazkaManager", "dajWszystkie,Local,";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaManager", "dodaj,Local,com.ksiegarnia.domena.Ksiazka";
+  permission javax.security.jacc.EJBMethodPermission "AutorResource", "usun,Local,long";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaManager", "usun,Local,com.ksiegarnia.domena.Ksiazka";
   permission javax.security.jacc.EJBMethodPermission "AutorManager", "dodaj,Local,com.ksiegarnia.domena.Autor";
   permission javax.security.jacc.EJBMethodPermission "AutorManager", "dajWszystkie,Local,";
@@ -17,8 +17,8 @@ grant {
   permission javax.security.jacc.EJBMethodPermission "AutorResource", "dajAutorow,Local,";
   permission javax.security.jacc.EJBMethodPermission "AutorResource", "podglad,Local,long";
   permission javax.security.jacc.EJBMethodPermission "AutorManager", "usun,Local,com.ksiegarnia.domena.Autor";
-  permission javax.security.jacc.EJBMethodPermission "AutorResource", "dodaj,Local,java.lang.String,int,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaResource", "usun,Local,long";
+  permission javax.security.jacc.EJBMethodPermission "AutorResource", "dodaj,Local,java.lang.String,int,java.lang.Integer";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaResource", "podglad,Local,long";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaManager", "edytuj,Local,com.ksiegarnia.domena.Ksiazka,java.util.Date,com.ksiegarnia.domena.Autor,java.lang.Double,java.lang.String";
   permission javax.security.jacc.EJBMethodPermission "KsiazkaResource", "dajKsiazki,Local,";

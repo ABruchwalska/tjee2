@@ -70,7 +70,7 @@ public final class dodaj_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t    data:\n");
       out.write("\t\t\t\t\t\t\t{\n");
       out.write("\t\t\t\t\t\t\t\timie: document.getElementById('imie').value,\n");
-      out.write("\t\t\t\t\t\t\t\twiek: document.getElementById('wiek').value,\n");
+      out.write("\t\t\t\t\t\t\t\twzrost: document.getElementById('wzrost').value,\n");
       out.write("\t\t\t\t\t\t\t\tilosck: document.getElementById('ilosck').value\n");
       out.write("\t\t\t\t\t\t\t\t\n");
       out.write("\t\t\t\t\t\t\t},\n");
@@ -107,10 +107,10 @@ public final class dodaj_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t        </div>\n");
       out.write("\n");
       out.write("\t\t        <div class=\"form-group\">\n");
-      out.write("\t\t            <label for=\"wiek\" class=\"col-sm-2 control-label\">Wiek:</label>\n");
+      out.write("\t\t            <label for=\"wzrost\" class=\"col-sm-2 control-label\">Wzrost:</label>\n");
       out.write("\n");
       out.write("\t\t            <div class=\"col-sm-10\">\n");
-      out.write("\t\t                <input type=\"text\" name=\"wiek\" id=\"wiek\" pattern=\"^[0-9][0-9]$\" class=\"form-control\"  placeholder=\"0.0\" required>\n");
+      out.write("\t\t                <input type=\"text\" name=\"wzrost\" id=\"wzrost\" pattern=\"^[0-9][0-9]$\" class=\"form-control\"  placeholder=\"0.0\" required>\n");
       out.write("\t\t            </div>\n");
       out.write("\t\t        </div>\n");
       out.write("\n");

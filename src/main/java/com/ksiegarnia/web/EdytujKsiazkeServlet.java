@@ -27,7 +27,7 @@ public class EdytujKsiazkeServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String link = request.getPathInfo();
-        request.setAttribute("ksiazkaEdytowany", km.pobierzPoId(Long.parseLong(link.substring(link.lastIndexOf("/") + 1, link.length()))));
+        request.setAttribute("ksiazkaEdytowana", km.pobierzPoId(Long.parseLong(link.substring(link.lastIndexOf("/") + 1, link.length()))));
         request.setAttribute("autorzyDostepni", am.dajDostepne());
         request.getRequestDispatcher("/ksiazki/edytuj.jsp").forward(request, response);
     }

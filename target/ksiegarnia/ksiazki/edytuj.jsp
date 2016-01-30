@@ -9,7 +9,7 @@
 	<script>
 		$(document).ready(function()
 			{
-				$( "#data" ).datepicker
+				$( "#datawyd" ).datepicker
 				(
 					{
 						changeMonth: true,
@@ -60,10 +60,10 @@
             	<form data-toggle="validator" method="put" class="form-horizontal">
 
 		        <div class="form-group">
-		            <label for="data" class="col-sm-2 control-label">Data:</label>
+		            <label for="datawyd" class="col-sm-2 control-label">Data:</label>
 
 		            <div class="col-sm-10">
-		                <input type="date" name="data" id="data" class="form-control" value="${ksiazkaEdytowany.getData()}" placeholder="rrrr-mm-dd" required>
+		                <input type="date" name="datawyd" id="datawyd" class="form-control" value="${ksiazkaEdytowany.getDatawyd()}" placeholder="rrrr-mm-dd" required>
 		            </div>
 		        </div>
 
@@ -90,12 +90,12 @@
 		            	<label for="cena" class="col-sm-2 control-label" >Cena:</label>
 
 		            	<div class="col-sm-10">
-		                	<input type="text" pattern="^[0-9]+$|^[0-9]+[.][0-9]+$" name="cena" id="cena" class="form-control" value="${ksiazkaEdytowana.getCena()}" placeholder="0.0" required>
+		                	<input type="text" pattern="^[0-9]+$|^[0-9]+[.][0-9]+$" name="cena" id="cena" class="form-control" value="${ksiazkaEdytowana.getCena()}" required>
 		            	</div>
 		        </div>
 
 		        <div class="form-group">
-		           	<label for="opis" class="col-sm-2 control-label" min="2">Opis:</label>
+		           	<label for="opis" class="col-sm-2 control-label" min="2">Opis: </label>
 
 		            	<div class="col-sm-10">
 		                	<input type="text" name="opis" id="opis" class="form-control" value="${ksiazkaEdytowana.getOpis()}">

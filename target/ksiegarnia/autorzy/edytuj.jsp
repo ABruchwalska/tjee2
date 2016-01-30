@@ -20,7 +20,7 @@
 						    data:
 							{
 						    	imie: document.getElementById('imie').value,
-								wiek: document.getElementById('wiek').value,
+								wzrost: document.getElementById('wzrost').value,
 								ilosck: document.getElementById('ilosck').value
 								
 							},
@@ -52,10 +52,10 @@
 		        </div>
 
 		        <div class="form-group">
-		            <label for="wiek" class="col-sm-2 control-label">Wiek:</label>
+		            <label for="wzrost" class="col-sm-2 control-label">Wzrost:</label>
 
 		            <div class="col-sm-10">
-		                <input type="text" name="wiek" id="wiek" pattern="^[0-9][0-9]$" class="form-control"  placeholder="0.0" value="${autorEdytowany.getWiek()}" required>
+		                <input type="text" name="wzrost" id="wzrost" pattern="^[0-9][0-9]$" class="form-control"  placeholder="0.0" value="${autorEdytowany.getWzrost()}" required>
 		            </div>
 		        </div>
 

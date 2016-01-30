@@ -15,6 +15,7 @@
 						url: '${pageContext.request.contextPath}/rest/ksiazka/podglad/${ksiazkaId}',
 						type: 'GET',
 						success: function(w) { 
+										
 										document.getElementById('pole1').innerHTML = w.datawyd;
 										document.getElementById('pole2').innerHTML = w.autor.imie;
 										document.getElementById('pole3').innerHTML = w.cena;
@@ -68,7 +69,7 @@
 	<div class="form-group text-center">
 		                <a href="${pageContext.request.contextPath}/EdytujKsiazke/${ksiazkaId}" class="btn btn-primary" role="button">Edytuj</a>
 		                <button id="usun" type="submit" class="btn btn-danger">Usuń</button>
-				<a href="${pageContext.request.contextPath}/Ksiazka" class="btn btn-default" role="button">Wróć</a>
+				<a href="${pageContext.request.contextPath}" class="btn btn-default" role="button">Wróć</a>
     	</div>
     </div>
 

@@ -73,7 +73,7 @@ public final class ksiazki_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t    tr = $('<tr/>');\n");
       out.write("\t\t\t\t\t\t\t\t\t    tr.append(\"<td>\"+dane[i].datawyd+\"</td>\");\n");
-      out.write("\t\t\t\t\t\t\t\t\t    tr.append(\"<td>\"+dane[i].autor+\"</td>\");\n");
+      out.write("\t\t\t\t\t\t\t\t\t    tr.append(\"<td>\"+dane[i].autor.imie+\"</td>\");\n");
       out.write("\t\t\t\t\t\t\t\t\t    tr.append(\"<td>\"+dane[i].cena+\"</td>\");\n");
       out.write("\t\t\t\t\t\t\t\t\t    tr.append(\"<td>\"+dane[i].opis+\"</td>\");\n");
       out.write("\t\t\t\t\t\t\t\t\t    td = $('<td/>');\n");

@@ -9,7 +9,7 @@
 	<script>
 		$(document).ready(function()
 			{
-				$( "#data" ).datepicker
+				$( "#datawyd" ).datepicker
 				(
 					{
 						changeMonth: true,
@@ -63,7 +63,7 @@
 		            <label for="data" class="col-sm-2 control-label">Data wydania:</label>
 
 		            <div class="col-sm-10">
-		                <input type="date" name="data" id="data" class="form-control" placeholder="rrrr-mm-dd" required/>
+		                <input type="date" name="datawyd" id="datawyd" class="form-control" placeholder="rrrr-mm-dd" required/>
 		            </div>
 		        </div>
 

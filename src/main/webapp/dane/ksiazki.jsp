@@ -23,7 +23,7 @@
 
 									    tr = $('<tr/>');
 									    tr.append("<td>"+dane[i].datawyd+"</td>");
-									    tr.append("<td>"+dane[i].autor+"</td>");
+									    tr.append("<td>"+dane[i].autor.imie+"</td>");
 									    tr.append("<td>"+dane[i].cena+"</td>");
 									    tr.append("<td>"+dane[i].opis+"</td>");
 									    td = $('<td/>');

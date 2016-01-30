@@ -67,7 +67,7 @@ public final class dodaj_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<script>\n");
       out.write("\t\t$(document).ready(function()\n");
       out.write("\t\t\t{\n");
-      out.write("\t\t\t\t$( \"#data\" ).datepicker\n");
+      out.write("\t\t\t\t$( \"#datawyd\" ).datepicker\n");
       out.write("\t\t\t\t(\n");
       out.write("\t\t\t\t\t{\n");
       out.write("\t\t\t\t\t\tchangeMonth: true,\n");
@@ -126,7 +126,7 @@ public final class dodaj_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t            <label for=\"data\" class=\"col-sm-2 control-label\">Data wydania:</label>\n");
       out.write("\n");
       out.write("\t\t            <div class=\"col-sm-10\">\n");
-      out.write("\t\t                <input type=\"date\" name=\"data\" id=\"data\" class=\"form-control\" placeholder=\"rrrr-mm-dd\" required/>\n");
+      out.write("\t\t                <input type=\"date\" name=\"datawyd\" id=\"datawyd\" class=\"form-control\" placeholder=\"rrrr-mm-dd\" required/>\n");
       out.write("\t\t            </div>\n");
       out.write("\t\t        </div>\n");
       out.write("\n");

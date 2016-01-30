@@ -16,7 +16,7 @@
 						type: 'GET',
 						success: function(w) { 
 										document.getElementById('pole1').innerHTML = w.imie;
-										document.getElementById('pole2').innerHTML = w.wiek;
+										document.getElementById('pole2').innerHTML = w.wzrost;
 										document.getElementById('pole3').innerHTML = w.ilosck;
 									}
 					}	
@@ -56,7 +56,7 @@
         <label>Imie:</label>
         <div id = "pole1" class="well well-sm"></div>
 
-        <label>Wiek:</label>
+        <label>Wzrost:</label>
         <div id = "pole2" class="well well-sm"></div>
 
         <label>Ilość książek:</label>
